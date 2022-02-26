@@ -270,6 +270,7 @@ public class User : Form
 
 
     }
+
     public void submit1_click(object sender, EventArgs e)// block of code will get call when user clicks on the submit
     {
         Boolean flag1 = true;
@@ -309,7 +310,7 @@ public class User : Form
 
         this.Text = "View FAQS";//setting new title for Form
         Label wel = new Label();
-        wel.Text = "Wel Come to the Category : " + b1 + " !! ";
+        wel.Text = "Welcome to the Category : " + b1 + " !! ";
         wel.Location = new Point(100, 25); //Set label position
         wel.Size = new Size(350, 25);
         wel.Font = new Font("Verdana", 10, FontStyle.Bold);
@@ -319,6 +320,108 @@ public class User : Form
         showquestion();
 
     }
+    /*
+     *     public void showquestion()
+    {
+        panel2.Location = new Point(50, 60);
+        panel2.Size = new Size(485, 320);
+        panel2.BackColor = Color.Pink;
+        this.Controls.Add(panel2);//newly created panel added to this Form
+
+        Button Reg2 = new Button();
+        Reg2.Text = "Next2";
+        Reg2.Location = new Point(200, 270);
+        Reg2.Size = new Size(75, 25);
+        Reg2.Font = new Font("verdana", 10, FontStyle.Bold);
+        Reg2.ForeColor = Color.Yellow;
+        Reg2.BackColor = Color.Red;
+        Reg2.Click += new EventHandler(submit2_click);
+
+        Label ques1 = new Label();
+        ques1.Text = "Question 1: Who won the 1998 Soccer world Cup ?";
+        ques1.Location = new Point(10, 20); //Set label position
+        ques1.Size = new Size(425, 25);
+        ques1.Font = new Font("Verdana", 10, FontStyle.Bold);
+        ques1.ForeColor = Color.Red;
+
+
+        GroupBox groupBox1 = new GroupBox();//creating Group box for radio buttons
+        groupBox1.Text = "Answer";
+        groupBox1.Location = new Point(50, 60);
+        groupBox1.Size = new Size(400, 175);
+
+
+        radioButton1.Location = new Point(20, 25);
+        radioButton1.Size = new Size(50, 25);
+        radioButton1.CheckedChanged += new System.EventHandler(value);//Evwn will call when user select any check box
+
+        Label ans1 = new Label();
+        ans1.Text = " France ";
+        ans1.Location = new Point(75, 25); //Set label position
+        ans1.Size = new Size(100, 25);
+        ans1.Font = new Font("Verdana", 10, FontStyle.Bold);
+        ans1.ForeColor = Color.Blue;
+
+
+        radioButton2.Location = new Point(20, 75);
+        radioButton2.Size = new Size(50, 25);
+        radioButton2.CheckedChanged += new System.EventHandler(value);
+
+        Label ans2 = new Label();
+        ans2.Text = " Brazil ";
+        ans2.Location = new Point(75, 75); //Set label position
+        ans2.Size = new Size(100, 25);
+        ans2.Font = new Font("Verdana", 10, FontStyle.Bold);
+        ans2.ForeColor = Color.Blue;
+
+
+        radioButton3.Location = new Point(20, 125);
+        radioButton3.Size = new Size(50, 25);
+        radioButton3.CheckedChanged += new System.EventHandler(value);
+
+        Label ans3 = new Label();
+        ans3.Text = " Italy ";
+        ans3.Location = new Point(75, 125); //Set label position
+        ans3.Size = new Size(100, 25);
+        ans3.Font = new Font("Verdana", 10, FontStyle.Bold);
+        ans3.ForeColor = Color.Blue;
+
+        // Add the RadioButtons to the GroupBox.
+        groupBox1.Controls.Add(radioButton1);
+        groupBox1.Controls.Add(radioButton2);
+        groupBox1.Controls.Add(radioButton3);
+        groupBox1.Controls.Add(ans1);
+        groupBox1.Controls.Add(ans2);
+        groupBox1.Controls.Add(ans3);
+
+        // Add the GroupBox to the Form.
+        Controls.Add(groupBox1);
+        panel2.Controls.Add(Reg2);
+        panel2.Controls.Add(ques1);
+        panel2.Controls.Add(groupBox1);
+
+    }
+    public void submit2_click(object sender, EventArgs e)
+    {
+
+        if (isTrue) //if given answer is correct, flag will be true, and Score Board will be incremented
+        {
+            scor = scor + 1;
+        }
+
+        isTrue = false;
+        Console.WriteLine(" value of score:" + scor);
+
+        showquestion1();// this function will remove current pannel and insert new panel          
+
+    }
+
+    public void value(object sender, EventArgs e)
+    {
+        isTrue = radioButton1.Checked; //will set to true if correct answer checkbox is selected by user           
+
+    }
+     */
 
     public void showquestion()
     {
